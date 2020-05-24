@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for key, values in publisher_dict.items %}
+
+        <ul class="list-group"><b>{{ key }}:</b>
+            {% for book in values %}
+            <li class="list-group-item">{{ book.title }} - {{ book.author }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}
